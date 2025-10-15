@@ -60,11 +60,16 @@
             display: flex;
             flex-direction: column; 
             align-items: center; 
-            gap: 5px; 
+            gap: 5px;
+            /* Изменено: Увеличена максимальная ширина контейнера логотипа */
+            max-width: 250px; 
+            width: 100%;
         }
         .logo-area img {
-            height: 70px; 
-            width: auto;
+            /* Изменено: Логотип занимает 100% ширины родителя */
+            width: 100%; 
+            height: auto; /* Автоматическая высота для сохранения пропорций */
+            object-fit: contain; 
         }
         .logo-area h1 {
             margin: 0;
@@ -258,6 +263,8 @@
         @media (max-width: 768px) {
             .logo-area {
                 margin-bottom: 5px; 
+                /* Изменено: Увеличена максимальная ширина контейнера логотипа для мобильных устройств */
+                max-width: 180px;
             }
             nav {
                 width: 100%;
@@ -308,7 +315,7 @@
                 <a href="#contacts">Контакты</a>
             </nav>
         </div>
-    </header>
+    </section>
 
     <section class="hero">
         <div class="container hero-content">
