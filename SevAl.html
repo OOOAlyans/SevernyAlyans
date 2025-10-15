@@ -61,14 +61,12 @@
             flex-direction: column; 
             align-items: center; 
             gap: 5px;
-            /* Изменено: Увеличена максимальная ширина контейнера логотипа */
             max-width: 250px; 
             width: 100%;
         }
         .logo-area img {
-            /* Изменено: Логотип занимает 100% ширины родителя */
             width: 100%; 
-            height: auto; /* Автоматическая высота для сохранения пропорций */
+            height: auto; 
             object-fit: contain; 
         }
         .logo-area h1 {
@@ -153,13 +151,10 @@
         }
         .section-title {
             text-align: center;
-            color: var(--primary-color);
+            color: var(--primary-color); 
             font-size: 2.5em;
             margin-bottom: 60px;
             font-weight: 700;
-        }
-        .section-title span {
-            color: var(--accent-color);
         }
 
         .services {
@@ -240,15 +235,44 @@
             text-align: center;
             background-color: var(--bg-light);
         }
-        .management p {
-            font-size: 1.1em;
-            color: var(--dark-text-color);
-            max-width: 700px;
+        .management-details {
+            max-width: 350px; /* Уменьшаем ширину, чтобы выглядело как карточка */
             margin: 0 auto;
+            background: var(--white);
+            padding: 40px 30px; /* Увеличиваем отступы */
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Более выраженная тень */
+            border-top: 5px solid var(--accent-color); /* Стильный верхний акцент */
+            text-align: center; 
         }
-        .management strong {
+
+        /* Новый класс для значка */
+        .management-icon {
+            font-size: 3em;
             color: var(--primary-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .management-details p {
+            font-size: 1.2em; 
+            color: var(--primary-color); 
+            margin: 0 0 10px 0; /* Отступ снизу */
+            font-weight: 500;
+        }
+        .management-details strong {
+            display: block; 
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.4em; /* Увеличенный шрифт для ФИО */
+            margin: 5px 0;
+        }
+        .management-details span {
+            display: block; 
             font-weight: 600;
+            color: var(--dark-text-color);
+            font-size: 1em; /* Меньший шрифт для должности */
+            margin-top: 5px;
         }
 
         footer {
@@ -263,7 +287,6 @@
         @media (max-width: 768px) {
             .logo-area {
                 margin-bottom: 5px; 
-                /* Изменено: Увеличена максимальная ширина контейнера логотипа для мобильных устройств */
                 max-width: 180px;
             }
             nav {
@@ -297,6 +320,13 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+            .management-details {
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .management-details strong {
+                font-size: 1.3em;
+            }
         }
     </style>
 </head>
@@ -315,7 +345,7 @@
                 <a href="#contacts">Контакты</a>
             </nav>
         </div>
-    </section>
+    </header>
 
     <section class="hero">
         <div class="container hero-content">
@@ -330,7 +360,7 @@
 
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Наши <span>компетенции</span></h2>
+            <h2 class="section-title">Наши компетенции</h2>
             <div class="service-list">
                 <div class="service-item">
                     <h4>Все виды проектирования любой сложности</h4>
@@ -346,10 +376,11 @@
     
     <section id="management" class="management">
         <div class="container">
-            <h2 class="section-title">Наше <span>руководство</span></h2>
-            <p>
-                Под руководством <strong>Генерального директора Кондратьева Виктора Сергеевича</strong>, ООО «СЕВЕРНЫЙ АЛЬЯНС» уверенно реализует проекты, сочетая инновационный подход и глубокие знания отрасли.
-            </p>
+            <div class="management-details">
+                <p>Руководитель</p>
+                <strong>Кондратьев Виктор Сергеевич</strong> 
+                <span>Генеральный директор</span>
+            </div>
         </div>
     </section>
 
